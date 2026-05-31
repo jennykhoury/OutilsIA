@@ -601,20 +601,82 @@ button {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
     background-color: #000;
+    min-height: 60px;
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+/* Nouveau style : lien cliquable vers YouTube */
+.video-link-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
+
+.video-link-box:hover {
+    background: linear-gradient(135deg, #1e1e3f 0%, #1a2a55 50%, #1a4a80 100%);
+}
+
+.video-thumbnail {
+    width: 140px;
+    min-width: 140px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.video-play-overlay {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.video-play-btn {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.5);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.video-link-box:hover .video-play-btn {
+    transform: scale(1.12);
+    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.6);
+}
+
+.video-play-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.video-play-text span {
+    color: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.video-play-text small {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.78rem;
+}
+
 
 .modal-body {
     padding: 2rem;

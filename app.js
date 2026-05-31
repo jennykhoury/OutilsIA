@@ -16,7 +16,8 @@ const toolsData = [
         desc: "Les compagnons idéaux pour structurer des plans de cours, générer des résumés de textes littéraires, trouver des idées de sujets d'examen ou rédiger des exercices de différents niveaux pour une classe hétérogène.",
         target: "Tous niveaux. Idéal pour débuter et gagner des heures de préparation.",
         programContext: "Créer instantanément une dictée différenciée ou un exemple de devoir de type Bac de Français.",
-        videoUrl: "https://www.youtube.com/embed/kYJt2x-Yn0Y",
+        videoUrl: "https://www.youtube.com/results?search_query=chatgpt+comment+l+utiliser+prof+enseignant",
+        videoTitle: "Chercher : 'ChatGPT pour les enseignants' sur YouTube",
         steps: [
             "Ouvrez le site de ChatGPT ou de Claude.",
             "Copiez un de nos prompts prêts à l'emploi ci-dessous.",
@@ -36,7 +37,8 @@ const toolsData = [
         desc: "Une IA révolutionnaire qui travaille uniquement à partir des documents que vous lui donnez (PDF du programme officiel, extraits de manuels scolaires, œuvres complètes). Aucun risque d'invention ou d'erreur, c'est un expert de vos propres fichiers !",
         target: "Enseignants du secondaire (Collège/Lycée) préparant des examens nationaux.",
         programContext: "Analyser le Bulletin Officiel (B.O.) ou une œuvre de français de 1ère pour générer des fiches de synthèse ou des podcasts audio explicatifs en un clic.",
-        videoUrl: "https://www.youtube.com/embed/nO3jVw9yR0w",
+        videoUrl: "https://www.youtube.com/results?search_query=google+notebooklm+tutoriel+complet+francais",
+        videoTitle: "Chercher : 'NotebookLM tutoriel complet en français' sur YouTube",
         steps: [
             "Connectez-vous sur NotebookLM avec votre compte Google.",
             "Créez un nouveau bloc-notes.",
@@ -56,7 +58,8 @@ const toolsData = [
         desc: "Gratuit pour les enseignants, Canva intègre de puissantes fonctions d'IA permettant de transformer un texte brut en une présentation diapositive illustrée et animée en 10 secondes, ou d'éditer des images simplement par commande vocale/écrite.",
         target: "Tous niveaux. Idéal pour capter l'attention visuelle des élèves.",
         programContext: "Créer un support de cours illustré pour le cycle de l'eau en SVT (6ème) avec des visuels géographiques locaux.",
-        videoUrl: "https://www.youtube.com/embed/FqX5L-n5TSc",
+        videoUrl: "https://www.youtube.com/results?search_query=canva+education+tutoriel+enseignant+francais",
+        videoTitle: "Chercher : 'Canva Éducation tutoriel enseignant' sur YouTube",
         steps: [
             "Connectez-vous à Canva pour l'Éducation (gratuit pour les profs).",
             "Cliquez sur 'Design Magique' ou créez un document texte classique.",
@@ -76,7 +79,8 @@ const toolsData = [
         desc: "Une alternative fantastique développée spécialement pour les enseignants. Gratuite, sans publicité, et 100% respectueuse du RGPD. Elle permet de créer des activités interactives (murs de post-it, flashcards, questionnaires multimédias) sans stocker de données élèves à leur insu.",
         target: "Parfait pour tous les professeurs des écoles homologuées AEFE soucieux de la sécurité numérique.",
         programContext: "Lancer un remue-méninges de début de cours sur un mur collaboratif anonymisé sécurisé.",
-        videoUrl: "https://www.youtube.com/embed/EZ12SPIs1LQ",
+        videoUrl: "https://www.youtube.com/results?search_query=tutoriel+digipad+la+digitale+enseignant",
+        videoTitle: "Chercher : 'Tutoriel Digipad La Digitale' sur YouTube",
         steps: [
             "Allez sur ladigitale.dev.",
             "Sélectionnez l'outil de votre choix : Digipad (murs collaboratifs) ou Digiquiz (exercices H5P).",
@@ -96,7 +100,8 @@ const toolsData = [
         desc: "Le tout nouvel outil de la suite Google Workspace for Education. Il permet de transformer un plan de cours, un texte documentaire ou un script écrit en une vidéo explicative dynamique avec voix hors champ automatique, transitions et musiques libres de droits.",
         target: "Enseignants souhaitant appliquer la classe inversée ou créer des capsules vidéos d'introduction.",
         programContext: "Réaliser une capsule de 2 minutes sur l'Impressionnisme en Histoire des Arts (3ème) ou un résumé de séquence de SVT.",
-        videoUrl: "https://www.youtube.com/embed/F0f-pYn74pQ",
+        videoUrl: "https://www.youtube.com/results?search_query=google+vids+tutoriel+francais+video+pedagogique",
+        videoTitle: "Chercher : 'Google Vids tutoriel français' sur YouTube",
         steps: [
             "Accédez à Google Workspace for Education (si activé par votre établissement).",
             "Ouvrez Google Vids.",
@@ -116,7 +121,8 @@ const toolsData = [
         desc: "Ces géants de l'évaluation interactive intègrent désormais l'IA. Collez le texte de votre leçon ou insérez un lien Web : l'IA extrait automatiquement les concepts clés pour générer un jeu de quiz de 10 questions en 10 secondes.",
         target: "Idéal pour réviser en classe en fin de séance de manière très interactive.",
         programContext: "Générer un quiz de révision sur le subjonctif présent ou le cycle de Krebs en un clin d'œil.",
-        videoUrl: "https://www.youtube.com/embed/F3wYlP9XQfM",
+        videoUrl: "https://www.youtube.com/results?search_query=quizizz+tutoriel+francais+IA+quiz+enseignant",
+        videoTitle: "Chercher : 'Quizizz tutoriel IA pour enseignants' sur YouTube",
         steps: [
             "Connectez-vous sur Quizizz avec votre compte enseignant.",
             "Cliquez sur 'Créer avec l'IA'.",
@@ -136,7 +142,8 @@ const toolsData = [
         desc: "Contrairement aux moteurs de recherche classiques qui renvoient des milliers de liens, ou aux IAs génératives classiques qui peuvent inventer (hallucinations), Perplexity répond précisément à vos requêtes en synthétisant l'information et en citant explicitement chaque source universitaire ou institutionnelle.",
         target: "Parfait pour la recherche documentaire, la préparation de cours d'Histoire, de SES, de SVT ou de Lettres.",
         programContext: "Trouver des documents d'époque authentiques et validés pédagogiquement sur l'histoire de la Méditerranée.",
-        videoUrl: "https://www.youtube.com/embed/FqS2BqFq9vY",
+        videoUrl: "https://www.youtube.com/results?search_query=perplexity+ai+tutoriel+francais+recherche",
+        videoTitle: "Chercher : 'Perplexity AI tutoriel en français' sur YouTube",
         steps: [
             "Rendez-vous sur perplexity.ai.",
             "Posez votre question de recherche pédagogique de manière détaillée.",
@@ -372,13 +379,22 @@ window.openToolModal = function(toolId) {
     modalSubtitle.textContent = tool.tagline;
     modalDesc.textContent = tool.desc;
     
-    // Intégration de l'iframe vidéo
+    // Affichage du bloc vidéo : lien de recherche YouTube garanti
+    const videoContainer = document.querySelector('.video-container');
     if (tool.videoUrl) {
-        modalIframe.src = tool.videoUrl;
-        document.querySelector('.video-container').style.display = 'block';
+        videoContainer.style.display = 'block';
+        videoContainer.innerHTML = `
+            <a href="${tool.videoUrl}" target="_blank" rel="noopener" class="video-link-box">
+                <div class="video-play-btn">▶</div>
+                <div class="video-play-text">
+                    <span>🎥 ${tool.videoTitle || 'Voir les tutoriels vidéo'}</span>
+                    <small>Cliquez pour ouvrir les résultats de recherche YouTube dans un nouvel onglet</small>
+                </div>
+            </a>
+        `;
     } else {
-        modalIframe.src = '';
-        document.querySelector('.video-container').style.display = 'none';
+        videoContainer.style.display = 'none';
+        videoContainer.innerHTML = '';
     }
 
     // Étapes de guide de démarrage
@@ -407,13 +423,15 @@ window.openToolModal = function(toolId) {
     }
 
     modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Bloquer le défilement
+    document.body.style.overflow = 'hidden';
 };
 
 function closeToolModal() {
     if (!modal) return;
     modal.style.display = 'none';
-    modalIframe.src = ''; // Stopper la vidéo
+    // Vider le conteneur vidéo pour stopper tout chargement
+    const vc = document.querySelector('.video-container');
+    if (vc) vc.innerHTML = '';
     document.body.style.overflow = 'auto';
 }
 
