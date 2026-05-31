@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Éducation Liban - Guide Pratique pour Enseignants</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Découvrez notre guide interactif et simple pour aider les enseignants des établissements français au Liban à utiliser l'IA au quotidien. Tutoriels, prompts prêts à l'emploi et quiz.">
+    <meta name="keywords" content="IA éducation, enseignement français, Liban, AEFE, prompts enseignants, RGPD école, ChatGPT professeurs">
+    
+    <!-- FontAwesome CDNs for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bouton Toggle Menu Mobile -->
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="app-container">
+        
+        <!-- Barre Latérale de Navigation (Sidebar) -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon">IA</div>
+                <h2 class="logo-text">
+                    EduAI Liban
+                    <span>Programme Français</span>
+                </h2>
+            </div>
+            
+            <nav style="flex-grow: 1;">
+                <ul class="nav-links">
+                    <li class="nav-item active">
+                        <a href="#accueil"><i class="fa-solid fa-house"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#catalogue"><i class="fa-solid fa-grip"></i> Catalogue Outils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#prompts"><i class="fa-solid fa-clipboard-list"></i> Modèles de Prompts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#quiz"><i class="fa-solid fa-compass"></i> Quel outil pour moi ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ethique"><i class="fa-solid fa-shield-halved"></i> Éthique & RGPD</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="theme-toggle-btn" id="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                    <span>Thème Clair</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Contenu Principal -->
+        <main class="main-content">
+            
+            <!-- Section Accueil / Hero -->
+            <section id="accueil" class="hero-section">
+                <span class="hero-badge">Édition Spéciale - Établissements Français du Liban</span>
+                <h1 class="hero-title">L'Intelligence Artificielle <br><span class="gradient-text">au Service des Enseignants</span></h1>
+                <p class="hero-subtitle">
+                    Préparez vos séances en quelques secondes, diversifiez vos exercices pour les élèves DYS, et concevez des supports stimulants. Ce guide interactif est pensé pour simplifier le travail des professeurs, en particulier ceux qui débutent ou ne sont pas forts en numérique.
+                </p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="#quiz" class="btn btn-primary">
+                        <i class="fa-solid fa-compass"></i> Trouver mon outil idéal
+                    </a>
+                    <a href="#catalogue" class="btn btn-outline">
+                        <i class="fa-solid fa-eye"></i> Explorer les outils
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bannière de Sécurité & Cadre RGPD -->
+            <div class="warning-banner glass-card" id="rgpd-alert">
+                <div class="warning-icon">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="warning-content">
+                    <h3>⚠️ Cadre Protecteur & RGPD (Éducation Nationale / AEFE)</h3>
+                    <p>
+                        L'utilisation de l'intelligence artificielle en milieu scolaire est une opportunité formidable, mais elle impose le respect strict du <strong>Règlement Général sur la Protection des Données (RGPD)</strong> afin de préserver la vie privée de nos élèves au Liban :
+                    </p>
+                    <ul>
+                        <li><strong>Anonymat absolu :</strong> Ne saisissez JAMAIS le nom, prénom, classe, ou des détails personnels d'un élève dans une IA publique (comme ChatGPT ou Canva).</li>
+                        <li><strong>Vérification systématique :</strong> L'IA peut générer des erreurs factuelles (hallucinations). Relisez toujours les sujets d'évaluation et exercices générés.</li>
+                        <li><strong>Propriété intellectuelle :</strong> Assurez-vous que les images et documents produits respectent le droit d'auteur.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 1 : Catalogue d'Outils -->
+            <section id="catalogue" class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Le Catalogue des Meilleurs Outils</h2>
+                    <p class="section-desc">
+                        Sélection des outils IA les plus performants, intuitifs et adaptés à la réalité pédagogique des écoles homologuées.
+                    </p>
+                </div>
+                
+                <!-- Zone de filtres et recherche -->
+                <div class="filter-search-container">
+                    <div class="filter-chips">
+                        <button class="filter-chip active" data-category="all">Tous les outils</button>
+                        <button class="filter-chip" data-category="preparation">Préparation de cours</button>
+                        <button class="filter-chip" data-category="media">Création Médias & Vidéos</button>
+                        <button class="filter-chip" data-category="evaluation">Évaluation & Quiz</button>
+                        <button class="filter-chip" data-category="recherche">Recherche fiable</button>
+                    </div>
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-input" class="search-input" placeholder="Rechercher un outil, un niveau, une matière...">
+                    </div>
+                </div>
+
+                <!-- Grille d'outils dynamique (remplie par app.js) -->
+                <div class="tools-grid" id="tools-grid">
+                    <!-- Généré dynamiquement -->
+                </div>
+            </section>
+
+            <!-- Section 2 : Bibliothèque de Prompts Rédigés -->
+            <section id="prompts" class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Modèles de "Prompts" prêts à l'emploi</h2>
+                    <p class="section-desc">
+                        Un prompt est une consigne rédigée pour l'IA. Copiez ces modèles spécialement conçus pour le programme français, collez-les dans l'outil recommandé et complétez les crochets [comme ceci].
+                    </p>
+                </div>
+
+                <!-- Liste de Prompts Dynamiques (remplie par app.js) -->
+                <div class="prompts-container" id="prompts-list">
+                    <!-- Généré dynamiquement -->
+                </div>
+            </section>
+
+            <!-- Section 3 : Questionnaire Interactif d'Orientation -->
+            <section id="quiz" class="section-container">
+                <div class="section-header" style="text-align: center;">
+                    <h2 class="section-title">Quel outil IA est fait pour vous ?</h2>
+                    <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+                        Vous êtes intimidé(e) ou vous ne savez pas par quoi commencer ? Répondez à ces 3 questions simples pour découvrir l'outil de démarrage idéal adapté à votre projet.
+                    </p>
+                </div>
+
+                <!-- Widget du Questionnaire -->
+                <div class="glass-card quiz-widget">
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                    </div>
+                    <div id="quiz-card">
+                        <!-- Les étapes du quiz seront insérées ici par app.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 : Charte Éthique et Bonnes Pratiques -->
+            <section id="ethique" class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Éthique, Posture & Esprit Critique</h2>
+                    <p class="section-desc">
+                        L'intelligence artificielle est un outil complémentaire précieux, mais elle ne remplacera jamais l'intelligence humaine et émotionnelle de l'enseignant.
+                    </p>
+                </div>
+
+                <div class="ethics-grid">
+                    <div class="glass-card ethics-card">
+                        <div class="ethics-card-header">
+                            <div class="ethics-card-icon">
+                                <i class="fa-solid fa-face-smile"></i>
+                            </div>
+                            <h3 class="ethics-card-title">La Posture de l'Enseignant</h3>
+                        </div>
+                        <p class="ethics-card-desc">
+                            L'IA n'a ni empathie, ni connaissance réelle de l'état psychologique ou social de vos élèves au Liban. Votre sensibilité pédagogique, votre bienveillance, et votre capacité à encourager et à adapter le cours en temps réel sont uniques et irremplaçables.
+                        </p>
+                    </div>
+
+                    <div class="glass-card ethics-card">
+                        <div class="ethics-card-header">
+                            <div class="ethics-card-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="ethics-card-title">Le Double-Check Critique</h3>
+                        </div>
+                        <p class="ethics-card-desc">
+                            L'IA assemble des mots selon des probabilités statistiques, elle ne réfléchit pas comme un humain. Elle peut faire de grosses erreurs en mathématiques complexes, inverser deux dates historiques ou inventer des auteurs. Validez TOUJOURS chaque résultat avant de le projeter ou de l'imprimer.
+                        </p>
+                    </div>
+
+                    <div class="glass-card ethics-card">
+                        <div class="ethics-card-header">
+                            <div class="ethics-card-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <h3 class="ethics-card-title">Inclusion & Sobriété Numérique</h3>
+                        </div>
+                        <p class="ethics-card-desc">
+                            Dans le contexte économique libanais actuel, tenez compte de la fracture numérique. Privilégiez les activités en classe et veillez à ne pas surcharger les élèves de devoirs nécessitant une connexion internet continue ou des abonnements payants.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pied de page -->
+            <footer>
+                <p>&copy; 2026 - Conçu avec dévouement pour la communauté éducative des établissements homologués au Liban.</p>
+                <p>
+                    Ressources officielles : 
+                    <a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Éduscol</a> | 
+                    <a href="https://www.aefe.fr/" target="_blank" rel="noopener">AEFE</a>
+                </p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Modale de Tutoriel d'Outil (Détails & Vidéo) -->
+    <div class="modal" id="video-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Fermer la fenêtre"><i class="fa-solid fa-xmark"></i></button>
+            
+            <!-- Conteneur Vidéo responsive -->
+            <div class="video-container">
+                <iframe id="modal-iframe" src="" referrerpolicy="no-referrer-when-downgrade" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="modal-body">
+                <h3 class="modal-title" id="modal-title">Nom de l'outil</h3>
+                <p class="modal-subtitle" id="modal-subtitle">Slogan</p>
+                <p class="modal-desc" id="modal-desc">Description longue...</p>
+                
+                <h4 style="margin-bottom: 0.8rem; font-size: 1.1rem;"><i class="fa-solid fa-list-check" style="color: var(--color-primary);"></i> Comment démarrer en 4 étapes simples :</h4>
+                <ul class="modal-steps" id="modal-steps-list">
+                    <!-- Rempli dynamiquement -->
+                </ul>
+                
+                <div style="margin-top: 1.5rem; display: none;">
+                    <h4 style="margin-bottom: 0.8rem; font-size: 1.1rem;"><i class="fa-solid fa-terminal" style="color: var(--color-success);"></i> Prompt recommandé à copier :</h4>
+                    <div class="prompt-content-box" id="modal-prompt-box" style="margin-bottom: 0.8rem; font-size: 0.88rem;"></div>
+                    <button class="btn btn-primary" id="modal-prompt-copy-btn"><i class="fa-solid fa-copy"></i> Copier l'invite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de logique -->
+    <script src="app.js"></script>
+    <script>
+        // Logique additionnelle pour mettre en évidence les liens actifs de la sidebar lors du défilement
+        const sections = document.querySelectorAll('section, .warning-banner');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                const linkHref = item.querySelector('a').getAttribute('href').substring(1);
+                if (linkHref === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
