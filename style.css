@@ -542,6 +542,18 @@ button {
     background-color: rgba(99, 102, 241, 0.05);
 }
 
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #059669;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+    color: white;
+}
+
 .btn-icon {
     width: 40px;
     height: 40px;

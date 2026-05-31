@@ -18,6 +18,8 @@ const toolsData = [
         programContext: "Créer instantanément une dictée différenciée ou un exemple de devoir de type Bac de Français.",
         videoUrl: "https://www.youtube.com/results?search_query=chatgpt+comment+l+utiliser+prof+enseignant",
         videoTitle: "Chercher : 'ChatGPT pour les enseignants' sur YouTube",
+        websiteUrl: "https://chatgpt.com",
+        websiteName: "Ouvrir ChatGPT",
         steps: [
             "Ouvrez le site de ChatGPT ou de Claude.",
             "Copiez un de nos prompts prêts à l'emploi ci-dessous.",
@@ -39,6 +41,8 @@ const toolsData = [
         programContext: "Analyser le Bulletin Officiel (B.O.) ou une œuvre de français de 1ère pour générer des fiches de synthèse ou des podcasts audio explicatifs en un clic.",
         videoUrl: "https://www.youtube.com/results?search_query=google+notebooklm+tutoriel+complet+francais",
         videoTitle: "Chercher : 'NotebookLM tutoriel complet en français' sur YouTube",
+        websiteUrl: "https://notebooklm.google.com",
+        websiteName: "Ouvrir NotebookLM",
         steps: [
             "Connectez-vous sur NotebookLM avec votre compte Google.",
             "Créez un nouveau bloc-notes.",
@@ -60,6 +64,8 @@ const toolsData = [
         programContext: "Créer un support de cours illustré pour le cycle de l'eau en SVT (6ème) avec des visuels géographiques locaux.",
         videoUrl: "https://www.youtube.com/results?search_query=canva+education+tutoriel+enseignant+francais",
         videoTitle: "Chercher : 'Canva Éducation tutoriel enseignant' sur YouTube",
+        websiteUrl: "https://www.canva.com/fr_fr/education/",
+        websiteName: "Ouvrir Canva Éducation",
         steps: [
             "Connectez-vous à Canva pour l'Éducation (gratuit pour les profs).",
             "Cliquez sur 'Design Magique' ou créez un document texte classique.",
@@ -81,6 +87,8 @@ const toolsData = [
         programContext: "Lancer un remue-méninges de début de cours sur un mur collaboratif anonymisé sécurisé.",
         videoUrl: "https://www.youtube.com/results?search_query=tutoriel+digipad+la+digitale+enseignant",
         videoTitle: "Chercher : 'Tutoriel Digipad La Digitale' sur YouTube",
+        websiteUrl: "https://ladigitale.dev",
+        websiteName: "Ouvrir La Digitale",
         steps: [
             "Allez sur ladigitale.dev.",
             "Sélectionnez l'outil de votre choix : Digipad (murs collaboratifs) ou Digiquiz (exercices H5P).",
@@ -102,6 +110,8 @@ const toolsData = [
         programContext: "Réaliser une capsule de 2 minutes sur l'Impressionnisme en Histoire des Arts (3ème) ou un résumé de séquence de SVT.",
         videoUrl: "https://www.youtube.com/results?search_query=google+vids+tutoriel+francais+video+pedagogique",
         videoTitle: "Chercher : 'Google Vids tutoriel français' sur YouTube",
+        websiteUrl: "https://vids.google.com",
+        websiteName: "Ouvrir Google Vids",
         steps: [
             "Accédez à Google Workspace for Education (si activé par votre établissement).",
             "Ouvrez Google Vids.",
@@ -123,6 +133,8 @@ const toolsData = [
         programContext: "Générer un quiz de révision sur le subjonctif présent ou le cycle de Krebs en un clin d'œil.",
         videoUrl: "https://www.youtube.com/results?search_query=quizizz+tutoriel+francais+IA+quiz+enseignant",
         videoTitle: "Chercher : 'Quizizz tutoriel IA pour enseignants' sur YouTube",
+        websiteUrl: "https://quizizz.com",
+        websiteName: "Ouvrir Quizizz",
         steps: [
             "Connectez-vous sur Quizizz avec votre compte enseignant.",
             "Cliquez sur 'Créer avec l'IA'.",
@@ -144,6 +156,8 @@ const toolsData = [
         programContext: "Trouver des documents d'époque authentiques et validés pédagogiquement sur l'histoire de la Méditerranée.",
         videoUrl: "https://www.youtube.com/results?search_query=perplexity+ai+tutoriel+francais+recherche",
         videoTitle: "Chercher : 'Perplexity AI tutoriel en français' sur YouTube",
+        websiteUrl: "https://www.perplexity.ai",
+        websiteName: "Ouvrir Perplexity AI",
         steps: [
             "Rendez-vous sur perplexity.ai.",
             "Posez votre question de recherche pédagogique de manière détaillée.",
@@ -347,8 +361,12 @@ function renderTools() {
             </div>
             <div class="tool-actions">
                 <button class="btn btn-primary" onclick="openToolModal('${tool.id}')">
-                    <i class="fa-solid fa-circle-play"></i> Tutoriel & Guide
+                    <i class="fa-solid fa-circle-play"></i> Tutoriel &amp; Guide
                 </button>
+                ${tool.websiteUrl ? `
+                <a href="${tool.websiteUrl}" target="_blank" rel="noopener" class="btn btn-success">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> ${tool.websiteName || 'Site officiel'}
+                </a>` : ''}
                 <button class="btn btn-outline btn-icon" onclick="copyDirectPrompt('${tool.id}')" title="Copier le prompt type">
                     <i class="fa-solid fa-copy"></i>
                 </button>
@@ -379,16 +397,16 @@ window.openToolModal = function(toolId) {
     modalSubtitle.textContent = tool.tagline;
     modalDesc.textContent = tool.desc;
     
-    // Affichage du bloc vidéo : lien de recherche YouTube garanti
+    // Affichage du bloc vidéo : lien de recherche YouTube garanti (nouvel onglet)
     const videoContainer = document.querySelector('.video-container');
     if (tool.videoUrl) {
         videoContainer.style.display = 'block';
         videoContainer.innerHTML = `
-            <a href="${tool.videoUrl}" target="_blank" rel="noopener" class="video-link-box">
+            <a href="${tool.videoUrl}" target="_blank" rel="noopener noreferrer" class="video-link-box">
                 <div class="video-play-btn">▶</div>
                 <div class="video-play-text">
                     <span>🎥 ${tool.videoTitle || 'Voir les tutoriels vidéo'}</span>
-                    <small>Cliquez pour ouvrir les résultats de recherche YouTube dans un nouvel onglet</small>
+                    <small>Cliquez pour ouvrir la recherche YouTube dans un <strong>nouvel onglet</strong></small>
                 </div>
             </a>
         `;
@@ -396,6 +414,24 @@ window.openToolModal = function(toolId) {
         videoContainer.style.display = 'none';
         videoContainer.innerHTML = '';
     }
+
+    // Bouton Site Officiel dans la modale
+    let officialBtnHtml = '';
+    if (tool.websiteUrl) {
+        officialBtnHtml = `
+            <a href="${tool.websiteUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-success" style="display:inline-flex; margin-bottom: 1.5rem; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ${tool.websiteName || 'Accéder au site officiel'}
+            </a>
+        `;
+    }
+    // Injecter le bouton site officiel après le titre
+    let officialBtnEl = document.getElementById('modal-official-btn');
+    if (!officialBtnEl) {
+        officialBtnEl = document.createElement('div');
+        officialBtnEl.id = 'modal-official-btn';
+        modalSubtitle.insertAdjacentElement('afterend', officialBtnEl);
+    }
+    officialBtnEl.innerHTML = officialBtnHtml;
 
     // Étapes de guide de démarrage
     modalStepsList.innerHTML = '';
